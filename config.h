@@ -21,7 +21,7 @@
 #define SPLIT_HAND_PIN B5
 
 // Not yet available in `info.json`
-#ifdef OLED_ENABLE
+#ifdef MXSTEINI_OLED_ENABLE
 #    define OLED_DISPLAY_128X64
 #    define SPLIT_OLED_ENABLE
 #endif
