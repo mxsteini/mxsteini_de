@@ -6,6 +6,25 @@ https://splitkb.com/collections/keyboard-kits/products/kyria-rev3-pcb-kit
 ## Layout
 ![Alt text](kyria-mxsteini-2.png)
 
+## Special Features
+### Layer 3
+#### Left side 
+- controlling gnome desktop
+- underglow controlls on key w,e,r,t
+
+#### right side
+- cursor controlls
+- bash history end on key h
+
+### layer 4 (macros and shortcuts)
+#### left side (macros)
+- key t: phpstorm, wrap in tag
+- key r: phpstorm, locate file
+
+#### right side (shortcuts)
+- key l: phpstorm, format
+
+
 ## Install
 In your qmk firmware folder:
 ```bash
