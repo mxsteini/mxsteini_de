@@ -60,8 +60,7 @@ bool oled_task_user(void) {
                 oled_write_P(PSTR("Undefined\n"), false);
         }
 	}
-	oled_write_P(PSTR("mxsteini_de"), false);
-		
+
     return false;
 }
 
