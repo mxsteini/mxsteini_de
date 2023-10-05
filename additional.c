@@ -12,9 +12,16 @@ void keyboard_pre_init_user(void) {
   writePinHigh(24);
 }
 
+void keyboard_post_init_user(void) {
+    // Initialize RGB to static black
+    rgblight_enable_noeeprom();
+    rgblight_sethsv_noeeprom(HSV_BLACK);
+    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+}
 
 bool oled_task_user(void) {
 
+    oled_clear();
     if(is_keyboard_left()) {
         switch (get_highest_layer(layer_state | default_layer_state)) {
             case 0:
@@ -62,6 +69,28 @@ bool oled_task_user(void) {
 	}
 
     return false;
+}
+
+void housekeeping_task_user(void) {
+    switch (get_highest_layer(layer_state | default_layer_state)) {
+        case 0:
+            // Default layer
+            rgblight_setrgb_at(RGB_BLACK, 0);
+            break;
+        case 1:
+            rgblight_setrgb_at(  0,   0, 20, 0);
+            break;
+        case 2:
+            rgblight_setrgb_at(17,   0,   0, 0);
+            break;
+        case 3:
+            rgblight_setrgb_at(  0, 15,   0, 0);
+            break;
+        case 4:
+            rgblight_setrgb_at(17,  3, 18, 0);
+            break;
+
+    }
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
