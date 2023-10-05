@@ -4,7 +4,7 @@ This is a german layout for splitkb kyria rev.3
 https://splitkb.com/collections/keyboard-kits/products/kyria-rev3-pcb-kit
 
 ## Layout
-![Alt text](kyria-mxsteini-2.png)
+![Alt text](keymap.png)
 
 ## Special Features
 ### Layer 3
